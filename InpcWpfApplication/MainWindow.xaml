@@ -1,0 +1,8 @@
+﻿<Window x:Class="InpcWpfApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:InpcWpfApplication="clr-namespace:InpcWpfApplication" Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <InpcWpfApplication:CustomerControl x:Name="customer1Control" />
+    </StackPanel>
+</Window>
