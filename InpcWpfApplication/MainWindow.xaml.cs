@@ -21,15 +21,21 @@ namespace InpcWpfApplication
     /// </summary>
     public partial class MainWindow : Window
     {
+        Address address = new Address();
+        private Customer customer1;
+
         public MainWindow()
         {
-            Address address = new Address();
-            Customer customer1 = new Customer() {Address = address};
-
-
+         
+            customer1 = new Customer() { Address = address };
             InitializeComponent();
 
             this.customer1Control.DataContext = new CustomerModelView(customer1);
+        }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            customer1.Reset();
         }
     }
 }

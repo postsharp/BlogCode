@@ -12,18 +12,13 @@ namespace InpcWpfApplication.DTO
 
     }
 
-
+    
     class Customer : Entity
     {
-        private string _firstName;
         private string _lastName;
         private Address _address;
-        
-        public string FirstName
-        {
-            get { return _firstName; }
-            set { _firstName = value; }
-        }
+
+        public string FirstName { get; set; }
 
         public string LastName
         {
@@ -37,16 +32,17 @@ namespace InpcWpfApplication.DTO
             set { _address = value; }
         }
 
-        public string FullName { get { return this.GetFullName(); } }
+        [NotifyPropertyChangedIgnore]
+        public string FullName { get { return this.GetFullName() + ", dude"; } }
 
-        private string GetFullName()
+        public string GetFullName()
         {
-            return string.Join(" ", this._firstName,this.LastName);
+            return string.Join(" ", this.FirstName,this.LastName);
         }
 
         public void Reset()
         {
-            this._firstName = null;
+            this.FirstName = null;
             this._lastName = null;
             this._address = null;
         }

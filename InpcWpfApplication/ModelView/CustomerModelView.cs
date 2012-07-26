@@ -61,7 +61,6 @@ namespace InpcWpfApplication.ModelView
             }
         }
 
-
        
     }
 }

@@ -4,5 +4,6 @@
         xmlns:InpcWpfApplication="clr-namespace:InpcWpfApplication" Title="MainWindow" Height="350" Width="525">
     <StackPanel>
         <InpcWpfApplication:CustomerControl x:Name="customer1Control" />
+        <Button Click="ButtonBase_OnClick">Reset</Button>
     </StackPanel>
 </Window>
