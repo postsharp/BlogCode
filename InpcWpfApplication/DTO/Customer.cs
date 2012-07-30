@@ -33,11 +33,11 @@ namespace InpcWpfApplication.DTO
         }
 
         [NotifyPropertyChangedIgnore]
-        public string FullName { get { return this.GetFullName() + ", dude"; } }
+        public string FullName { get { return this.GetFullName(); } }
 
         public string GetFullName()
         {
-            return string.Join(" ", this.FirstName,this.LastName);
+            return string.Join(" ", this.FirstName, this.LastName);
         }
 
         public void Reset()

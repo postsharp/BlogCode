@@ -17,27 +17,22 @@ namespace InpcWpfApplication.ModelView
             this.customer = customer;
         }
 
-        [DependsOn("customer.FirstName")]
         public string FirstName
         {
             get { return this.customer.FirstName; }
             set { this.customer.FirstName = value; }
         }
 
-        [DependsOn("customer.LastName")]
         public string LastName
         {
             get { return this.customer.LastName; }
             set { this.customer.LastName = value; } 
         }
 
-        [DependsOn("customer.Address")]
         public Address Address { get { return this.customer.Address; } }
 
-        [DependsOn("customer.FullName")]
         public string FullName { get { return this.customer.FullName; } }
 
-         [DependsOn("FirstName", "LastName", "customer.Address.Line1", "customer.Address.Line2", "customer.Address.PostalCode", "customer.Address.Town")]
         public string BusinessCard
         {
             get
