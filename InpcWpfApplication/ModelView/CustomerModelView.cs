@@ -42,15 +42,18 @@ namespace InpcWpfApplication.ModelView
                 stringBuilder.Append(" ");
                 stringBuilder.Append(this.LastName);
                 stringBuilder.AppendLine();
-                stringBuilder.AppendLine(this.customer.Address.Line1);
-                string line2 = this.customer.Address.Line2;
-                if (!string.IsNullOrWhiteSpace(line2))
+                if (this.customer.Address != null)
                 {
-                    stringBuilder.AppendLine(line2);
+                    stringBuilder.AppendLine(this.customer.Address.Line1);
+                    string line2 = this.customer.Address.Line2;
+                    if (!string.IsNullOrWhiteSpace(line2))
+                    {
+                        stringBuilder.AppendLine(line2);
+                    }
+                    stringBuilder.Append(this.customer.Address.PostalCode);
+                    stringBuilder.Append(' ');
+                    stringBuilder.Append(this.customer.Address.Town);
                 }
-                stringBuilder.Append(this.customer.Address.PostalCode);
-                stringBuilder.Append(' ');
-                stringBuilder.Append(this.customer.Address.Town);
 
                 return stringBuilder.ToString();
             }

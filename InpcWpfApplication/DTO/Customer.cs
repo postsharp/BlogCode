@@ -32,7 +32,7 @@ namespace InpcWpfApplication.DTO
             set { _address = value; }
         }
 
-        [NotifyPropertyChangedIgnore]
+        //[NotifyPropertyChangedIgnore]
         public string FullName { get { return this.GetFullName(); } }
 
         public string GetFullName()
@@ -44,7 +44,7 @@ namespace InpcWpfApplication.DTO
         {
             this.FirstName = null;
             this._lastName = null;
-            this._address = null;
+            this._address = new Address();
         }
 
 
