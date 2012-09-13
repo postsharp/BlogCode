@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using InpcWpfApplication.DTO;
-using InpcWpfApplication.ModelView;
+using InpcWpfApplication.ViewModels;
 
 namespace InpcWpfApplication
 {
@@ -30,7 +30,7 @@ namespace InpcWpfApplication
             customer1 = new Customer() { Address = address };
             InitializeComponent();
 
-            this.customer1Control.DataContext = new CustomerModelView(customer1);
+            this.customer1Control.DataContext = new CustomerViewModel(customer1);
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)

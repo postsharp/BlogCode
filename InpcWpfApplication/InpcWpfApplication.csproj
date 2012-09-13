@@ -46,12 +46,10 @@
       <HintPath>packages\PostSharp.Toolkit.Domain.2.1.1.9\lib\net40\PostSharp.Toolkit.Domain.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -67,8 +65,11 @@
     <Compile Include="CustomerControl.xaml.cs">
       <DependentUpon>CustomerControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DTO\Address.cs" />
     <Compile Include="DTO\Customer.cs" />
-    <Compile Include="ModelView\CustomerModelView.cs" />
+    <Compile Include="DTO\Entity.cs" />
+    <Compile Include="ViewModels\CustomerViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="RequiresPostSharp.cs" />
     <Page Include="CustomerControl.xaml">
       <SubType>Designer</SubType>
